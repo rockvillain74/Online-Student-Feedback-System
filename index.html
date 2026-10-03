@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home — Online Student Feedback System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======== Navigation ======== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span>📝</span> Student Feedback
+      </a>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== Hero Section ======== -->
+  <main class="main-content">
+    <section class="hero">
+      <h1>Online Student Feedback System</h1>
+      <p>
+        Share your thoughts on courses, faculty, and campus life.
+        Your honest feedback helps improve the quality of education for everyone.
+      </p>
+      <a href="feedback.html" class="btn btn-accent">📋 Give Feedback</a>
+    </section>
+
+    <!-- ======== Features ======== -->
+    <h2 class="text-center mb-3">Why Use This System?</h2>
+    <div class="card-grid">
+      <div class="card text-center">
+        <h3>🎯 Easy Submission</h3>
+        <p>Fill out a simple form to share your feedback about any course or faculty member in just a few clicks.</p>
+      </div>
+      <div class="card text-center">
+        <h3>📊 Live Dashboard</h3>
+        <p>View aggregated ratings, statistics, and recent comments on the dashboard — updated in real time.</p>
+      </div>
+      <div class="card text-center">
+        <h3>🔒 Anonymous &amp; Safe</h3>
+        <p>No login required. Your feedback is stored locally in your browser and never sent to any server.</p>
+      </div>
+      <div class="card text-center">
+        <h3>📱 Works Everywhere</h3>
+        <p>Fully responsive design that looks great on desktops, tablets, and smartphones.</p>
+      </div>
+    </div>
+
+    <!-- ======== Quick Links ======== -->
+    <section class="text-center mt-3">
+      <a href="feedback.html" class="btn btn-primary">Submit Feedback</a>
+      &nbsp;
+      <a href="dashboard.html" class="btn btn-outline">View Dashboard</a>
+    </section>
+  </main>
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <p>&copy; 2025 Online Student Feedback System — Academic Demo Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

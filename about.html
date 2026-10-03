@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Online Student Feedback System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======== Navigation ======== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span>📝</span> Student Feedback
+      </a>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== About Content ======== -->
+  <main class="main-content" style="max-width:860px;">
+    <h1 class="mb-3">ℹ️ About This Project</h1>
+
+    <section class="about-section">
+      <h2>Project Overview</h2>
+      <div class="card">
+        <p>
+          The <strong>Online Student Feedback System</strong> is an academic web project that allows
+          college students to submit feedback about their courses, faculty members, and overall
+          academic experience. All submitted data is stored in the browser's <code>localStorage</code>,
+          making it a fully front-end demonstration with no server or database required.
+        </p>
+        <p class="mt-2">
+          <strong>⚠️ Disclaimer:</strong> This is a <em>front-end academic demo</em>. It does not
+          include real user accounts, authentication, or a secure back-end server. It is intended
+          solely for educational and project-submission purposes.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Purpose &amp; Objectives</h2>
+      <div class="card">
+        <ul style="padding-left:20px;">
+          <li>Provide a simple, anonymous platform for students to share course feedback.</li>
+          <li>Demonstrate front-end web development skills using HTML, CSS, and JavaScript.</li>
+          <li>Showcase form validation, localStorage persistence, and dynamic DOM rendering.</li>
+          <li>Present aggregated feedback data through an interactive dashboard.</li>
+          <li>Serve as a reusable template for college web-development coursework.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Key Features</h2>
+      <div class="card-grid">
+        <div class="card">
+          <h3>📋 Feedback Form</h3>
+          <p>Structured form with course, department, semester, faculty, 5-star rating, and written comments — with real-time validation.</p>
+        </div>
+        <div class="card">
+          <h3>📊 Dashboard</h3>
+          <p>Summary statistics, bar chart of department-wise ratings, and a table of recent feedback entries.</p>
+        </div>
+        <div class="card">
+          <h3>🔍 Filtering</h3>
+          <p>Filter feedback by course or department to focus on the data that matters to you.</p>
+        </div>
+        <div class="card">
+          <h3>💾 Local Storage</h3>
+          <p>All data is persisted in the browser using <code>localStorage</code>, surviving page refreshes.</p>
+        </div>
+        <div class="card">
+          <h3>📱 Responsive</h3>
+          <p>Mobile-friendly layout that adapts to any screen size using CSS Grid and media queries.</p>
+        </div>
+        <div class="card">
+          <h3>🎨 Clean UI</h3>
+          <p>Modern, minimalist design with CSS custom properties for easy theme customisation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Technologies Used</h2>
+      <div class="card">
+        <ul class="tech-list">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript (ES6+)</li>
+          <li>localStorage API</li>
+          <li>CSS Grid &amp; Flexbox</li>
+          <li>CSS Custom Properties</li>
+          <li>Responsive Design</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Limitations</h2>
+      <div class="card">
+        <ul style="padding-left:20px;">
+          <li>Data is stored only in the current browser — clearing browser data erases feedback.</li>
+          <li>No user authentication or role-based access control.</li>
+          <li>No server-side processing or real database.</li>
+          <li>Dashboard charts are basic CSS-based visualisations, not a full charting library.</li>
+          <li>Cannot aggregate feedback across multiple devices or users.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2>Future Improvements</h2>
+      <div class="card">
+        <ul style="padding-left:20px;">
+          <li>Add a Node.js/Flask back-end with a real database (MySQL, MongoDB).</li>
+          <li>Implement user login and admin panel for faculty/administrators.</li>
+          <li>Use Chart.js or D3.js for richer, interactive visualisations.</li>
+          <li>Add export to CSV/PDF functionality for reports.</li>
+          <li>Enable sentiment analysis on written comments.</li>
+          <li>Deploy to a cloud platform (Heroku, Vercel, Netlify).</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <p>&copy; 2025 Online Student Feedback System — Academic Demo Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

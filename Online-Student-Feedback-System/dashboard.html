@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Online Student Feedback System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======== Navigation ======== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span>📝</span> Student Feedback
+      </a>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== Dashboard ======== -->
+  <main class="main-content" id="dashboardSection">
+    <h1 class="mb-3">📊 Feedback Dashboard</h1>
+
+    <!-- Stats Cards -->
+    <div class="stats-row">
+      <div class="stat-card">
+        <div class="stat-value" id="statTotal">0</div>
+        <div class="stat-label">Total Responses</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statAvg">0.0</div>
+        <div class="stat-label">Average Rating</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statCourses">0</div>
+        <div class="stat-label">Courses Covered</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value" id="statDepts">0</div>
+        <div class="stat-label">Departments</div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="card">
+      <h3>🔍 Filter Feedback</h3>
+      <div class="filter-bar">
+        <div class="form-group">
+          <label for="filterCourse">Course</label>
+          <select id="filterCourse">
+            <option value="">All Courses</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="filterDept">Department</label>
+          <select id="filterDept">
+            <option value="">All Departments</option>
+          </select>
+        </div>
+        <div>
+          <button class="btn btn-outline" id="clearFilters">Clear Filters</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bar Chart -->
+    <div class="card">
+      <h3>📈 Average Rating by Department</h3>
+      <div class="bar-chart" id="barChart">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+
+    <!-- Recent Comments -->
+    <div class="card">
+      <h3>💬 Recent Comments</h3>
+      <div style="overflow-x:auto;">
+        <table class="comments-table">
+          <thead>
+            <tr>
+              <th>Course</th>
+              <th>Faculty</th>
+              <th>Rating</th>
+              <th>Comment</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="commentsBody">
+            <!-- Rendered by JS -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </main>
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <p>&copy; 2025 Online Student Feedback System — Academic Demo Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

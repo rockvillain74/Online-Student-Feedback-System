@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Give Feedback — Online Student Feedback System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ======== Navigation ======== -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="nav-brand">
+        <span>📝</span> Student Feedback
+      </a>
+      <button class="nav-toggle" onclick="toggleNav()" aria-label="Toggle menu">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ======== Feedback Form ======== -->
+  <main class="main-content" style="max-width:720px;">
+    <h1 class="mb-3">📋 Submit Your Feedback</h1>
+
+    <form id="feedbackForm" class="card" novalidate>
+      <!-- Course Name -->
+      <div class="form-group">
+        <label for="course">Course Name <span class="required">*</span></label>
+        <input type="text" id="course" placeholder="e.g. Data Structures" />
+        <p class="error-msg">Please enter the course name.</p>
+      </div>
+
+      <!-- Department -->
+      <div class="form-group">
+        <label for="department">Department <span class="required">*</span></label>
+        <select id="department">
+          <option value="">— Select Department —</option>
+          <option value="Computer Science">Computer Science</option>
+          <option value="Electronics">Electronics</option>
+          <option value="Mathematics">Mathematics</option>
+          <option value="Physics">Physics</option>
+          <option value="Chemistry">Chemistry</option>
+          <option value="Mechanical">Mechanical</option>
+          <option value="Civil">Civil</option>
+          <option value="Other">Other</option>
+        </select>
+        <p class="error-msg">Please select a department.</p>
+      </div>
+
+      <!-- Semester -->
+      <div class="form-group">
+        <label for="semester">Semester <span class="required">*</span></label>
+        <select id="semester">
+          <option value="">— Select Semester —</option>
+          <option value="Spring 2025">Spring 2025</option>
+          <option value="Fall 2025">Fall 2025</option>
+          <option value="Spring 2026">Spring 2026</option>
+          <option value="Fall 2026">Fall 2026</option>
+        </select>
+        <p class="error-msg">Please select a semester.</p>
+      </div>
+
+      <!-- Faculty Name -->
+      <div class="form-group">
+        <label for="faculty">Faculty Name <span class="required">*</span></label>
+        <input type="text" id="faculty" placeholder="e.g. Dr. Ananya Sharma" />
+        <p class="error-msg">Please enter the faculty name.</p>
+      </div>
+
+      <!-- Star Rating -->
+      <div class="form-group" id="ratingGroup">
+        <label>Overall Rating <span class="required">*</span></label>
+        <div class="star-rating">
+          <input type="radio" id="star5" name="rating" value="5" /><label for="star5" title="5 — Excellent">★</label>
+          <input type="radio" id="star4" name="rating" value="4" /><label for="star4" title="4 — Very Good">★</label>
+          <input type="radio" id="star3" name="rating" value="3" /><label for="star3" title="3 — Good">★</label>
+          <input type="radio" id="star2" name="rating" value="2" /><label for="star2" title="2 — Fair">★</label>
+          <input type="radio" id="star1" name="rating" value="1" /><label for="star1" title="1 — Poor">★</label>
+        </div>
+        <p class="error-msg">Please select a rating.</p>
+      </div>
+
+      <!-- Comments -->
+      <div class="form-group">
+        <label for="comment">Your Comments <span class="required">*</span></label>
+        <textarea id="comment" placeholder="Share your experience, suggestions, or concerns…"></textarea>
+        <p class="error-msg">Please enter your comments.</p>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="btn btn-success" style="width:100%;">✅ Submit Feedback</button>
+    </form>
+  </main>
+
+  <!-- ======== Confirmation Modal ======== -->
+  <div class="modal-overlay" id="confirmModal">
+    <div class="modal-box">
+      <div class="modal-icon">✅</div>
+      <h2>Thank You!</h2>
+      <p>Your feedback has been submitted successfully and saved locally.</p>
+      <a href="dashboard.html" class="btn btn-primary">View Dashboard</a>
+      &nbsp;
+      <button class="btn btn-outline" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <!-- ======== Footer ======== -->
+  <footer class="footer">
+    <p>&copy; 2025 Online Student Feedback System — Academic Demo Project</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
